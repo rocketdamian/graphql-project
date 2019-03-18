@@ -21,13 +21,15 @@ const UsersList = () => (
       return (
         <table>
           <thead>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Email</th>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
           </thead>
           <tbody>
           {data.users.map(user => (
-            <tr>
+            <tr key={user.id}>
               <td>
                 {user.id}
               </td>
@@ -41,11 +43,6 @@ const UsersList = () => (
           ))}
           </tbody>
         </table>
-        // <ul name="users">
-        //   {data.users.map(user => (
-        //     <li>ID: {user.id}, Name: {user.name}, Email: {user.email}</li>
-        //   ))}
-        // </ul>
       );
     }}
   </Query>
