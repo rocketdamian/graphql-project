@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import UsersList from './components/UsersList';
+import AddUser from './components/AddUser';
 
 
 class App extends Component {
@@ -9,7 +10,12 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <UsersList></UsersList>
+          <div className="add-user">
+            <AddUser></AddUser>
+          </div>
+          <div className="user-list">
+            <UsersList></UsersList>
+          </div>
         </header>
       </div>
     );

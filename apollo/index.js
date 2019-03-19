@@ -1,4 +1,5 @@
 require('dotenv').config();
+
 const { ApolloServer, gql } = require('apollo-server');
 const { prisma } = require('../prisma/generated/prisma-client');
 
